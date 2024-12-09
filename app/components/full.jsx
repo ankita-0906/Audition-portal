@@ -1,3 +1,4 @@
+"use client"
 import { useState } from 'react';
 import RegistrationForm from "./first";
 import Second from './Second';
@@ -45,14 +46,16 @@ export default function TwoPageForm() {
 
   const handleInputChange = (e) => {
     console.log(e)
-    const { name, value } = e.target;
-    // const {value} = e.target
+    const { name, value } = e.target; //same variable should be given
+    // const value = e.target.value
+    //const name=e.target.name;
     // Check if the input is one of the rating categories
     if (name.startsWith("rating_")) {
-      const index = parseInt(name.split("_")[1], 3); 
-      // console.log(index)// Get the index from the name
+      const index = parseInt(name.split("_")[1], 10); 
+       console.log(index)
+       console.log(typeof(value));
       const newRatingValue = Number(value); // Convert value to a number
-
+ 
 
       setFormData((prevData) => {
         console.log(prevData)

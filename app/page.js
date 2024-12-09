@@ -1,4 +1,4 @@
-"use client"
+//npm "use client"
 
 import TwoPageForm from "./components/full";
 

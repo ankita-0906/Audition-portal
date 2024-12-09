@@ -1,5 +1,7 @@
 import React from "react";
-import ParticlesBg from "particles-bg";
+//import ParticlesBg from "particles-bg";
+import dynamic from "next/dynamic";
+const ParticlesBg = dynamic(() => import("particles-bg"), { ssr: false });
 
 function Eightth({ formData, handleInputChange, setpage }) {
   return (
